@@ -8,11 +8,22 @@ class SimpleStartup {
 
     public String checkYourself(int guess) {
         String result = "miss";
+        int[] hited = new int[3];
+        int i = 0;
         for (int cell : locationCells){
             if (guess == cell){
-                result = "hit";
-                numOfHits++;
-                break;
+                if ((guess == hited[0]) || (guess == hited[1]) || (guess == hited[2])) {
+                    System.out.println("You already hit this cell!");
+                    result = "miss";
+                    break;
+                }
+                else{
+                    hited[i] = guess;
+                    i++;
+                    result = "hit";
+                    numOfHits++;
+                    break;
+                }
             }
         }
         if (numOfHits == locationCells.length){
