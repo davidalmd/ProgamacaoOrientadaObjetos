@@ -1,6 +1,8 @@
 class SimpleStartup {
     private int[] locationCells;
     private int numOfHits = 0;
+    private int[] hited = new int[3];
+    private int contador = 0;
 
     public void setLocationCells(int[] locs) {
         locationCells = locs;
@@ -8,8 +10,6 @@ class SimpleStartup {
 
     public String checkYourself(int guess) {
         String result = "miss";
-        int[] hited = new int[3];
-        int i = 0;
         for (int cell : locationCells){
             if (guess == cell){
                 if ((guess == hited[0]) || (guess == hited[1]) || (guess == hited[2])) {
@@ -18,8 +18,8 @@ class SimpleStartup {
                     break;
                 }
                 else{
-                    hited[i] = guess;
-                    i++;
+                    hited[contador] = guess;
+                    contador++;
                     result = "hit";
                     numOfHits++;
                     break;
