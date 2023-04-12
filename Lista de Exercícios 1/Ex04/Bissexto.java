@@ -29,5 +29,7 @@ public class Bissexto {
         else {
             System.out.println("O ano " + valorAno + " não é bissexto.");
         }
+
+        input.close();
     }
 }
