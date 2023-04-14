@@ -1,14 +1,12 @@
 
 public abstract class Animal {
-  public void eat() {
+  public abstract void eat();
 
-  }
+  public abstract void roam();
 
-  public void roam() {
+  public abstract void makeNoise();
 
-  }
-
-  public void makeNoise() {
-
+  public String toString() {
+    return "Animal";
   }
 }
