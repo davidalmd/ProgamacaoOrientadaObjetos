@@ -1,5 +1,3 @@
-import java.beans.ExceptionListener;
-
 import javax.sound.midi.*;
 
 public class MusicTest1 {
